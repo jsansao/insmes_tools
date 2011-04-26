@@ -26,6 +26,6 @@ for j=1:ly-ord
     end
 end
 
-p = max(1/ly,c/(ly-ord))
+p = max(1/ly,c/(ly-ord));
 e = -sum(p .* log(p))/(ord-1);
 
