@@ -18,7 +18,7 @@ file = textscan(fid, '%s', 'delimiter', '\n', 'whitespace', '');
 fclose(fid);
 lines = file{1};
 Linha = lines{1, :};
-[a b snr_mes deviation] = strread(Linha, '%s %s %f %f', 'delimiter',' ');
+[a b snr_mes deviation] = strread(Linha, '%s %s %s %s', 'delimiter',' ');
          
 command = ['!rm ' ArquivoTemp ' ' ArquivoTemp2 ...
                                '.stt ' ArquivoTemp3];
