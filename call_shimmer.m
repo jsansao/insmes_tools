@@ -20,8 +20,8 @@ lines = file{1};
 Linha = lines{1, :};
 [a b snr_mes_s deviation_s] = strread(Linha, '%s %s %s %s', 'delimiter',' ');
          
-snr_mes = str2num(snr_mes_s);
-deviation = str2num(deviation_s);
+snr_mes = str2num(snr_mes_s{:});
+deviation = str2num(deviation_s{:});
 
 command = ['!rm ' ArquivoTemp ' ' ArquivoTemp2 ...
                                '.stt ' ArquivoTemp3];
